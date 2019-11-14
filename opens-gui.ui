@@ -1,0 +1,453 @@
+<?xml version='1.0' encoding='utf-8'?>
+<interface>
+  <object class="tk.Frame" id="Mainframe">
+    <property name="borderwidth">2</property>
+    <property name="cursor">based_arrow_up</property>
+    <property name="height">600</property>
+    <property name="padx">3</property>
+    <property name="pady">5</property>
+    <property name="width">800</property>
+    <layout>
+      <property name="column">0</property>
+      <property name="propagate">True</property>
+      <property name="row">0</property>
+      <property name="sticky">w</property>
+    </layout>
+    <child>
+      <object class="tk.LabelFrame" id="SystemParaFrame">
+        <property name="borderwidth">2</property>
+        <property name="font">{Times New Roman} 14 {}</property>
+        <property name="height">200</property>
+        <property name="padx">5</property>
+        <property name="pady">5</property>
+        <property name="text" translatable="yes">System Related Parameters</property>
+        <property name="width">305</property>
+        <layout>
+          <property name="column">0</property>
+          <property name="propagate">True</property>
+          <property name="row">1</property>
+          <property name="sticky">w</property>
+        </layout>
+        <child>
+          <object class="tk.Label" id="Label_19">
+            <property name="padx">15</property>
+            <property name="pady">0</property>
+            <property name="text" translatable="yes">System's MTTF after Human-fix (h_{U_H}):</property>
+            <layout>
+              <property name="column">0</property>
+              <property name="propagate">True</property>
+              <property name="row">2</property>
+              <property name="sticky">e</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="tk.Label" id="Label_20">
+            <property name="padx">15</property>
+            <property name="text" translatable="yes">Mean Time to Human-fix (h_{D_H}):</property>
+            <layout>
+              <property name="column">0</property>
+              <property name="propagate">True</property>
+              <property name="row">3</property>
+              <property name="sticky">e</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="tk.Label" id="Label_21">
+            <property name="padx">15</property>
+            <property name="text" translatable="yes">Mean Time to Failure Detection and Diagnosis (h_{DD}):</property>
+            <layout>
+              <property name="column">0</property>
+              <property name="propagate">True</property>
+              <property name="row">4</property>
+              <property name="sticky">w</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="tk.Entry" id="OriginMTTF">
+            <property name="text" translatable="yes">43200</property>
+            <property name="textvariable">string:mttf_origin</property>
+            <property name="width">33</property>
+            <layout>
+              <property name="column">1</property>
+              <property name="propagate">True</property>
+              <property name="row">2</property>
+              <property name="sticky">w</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="tk.Entry" id="HDown">
+            <property name="text" translatable="yes">1440</property>
+            <property name="textvariable">string:h_down</property>
+            <property name="width">33</property>
+            <layout>
+              <property name="column">1</property>
+              <property name="propagate">True</property>
+              <property name="row">3</property>
+              <property name="sticky">w</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="tk.Entry" id="HDD">
+            <property name="text" translatable="yes">5</property>
+            <property name="textvariable">string:h_dd</property>
+            <property name="width">33</property>
+            <layout>
+              <property name="column">1</property>
+              <property name="propagate">True</property>
+              <property name="row">4</property>
+              <property name="sticky">w</property>
+            </layout>
+          </object>
+        </child>
+      </object>
+    </child>
+    <child>
+      <object class="tk.LabelFrame" id="RecoveryParaFrame">
+        <property name="borderwidth">2</property>
+        <property name="font">{Times New Roman} 14 {}</property>
+        <property name="height">150</property>
+        <property name="pady">5</property>
+        <property name="text" translatable="yes">Recovery Methods Related Parameters</property>
+        <property name="width">600</property>
+        <layout>
+          <property name="column">0</property>
+          <property name="propagate">False</property>
+          <property name="row">2</property>
+          <property name="sticky">w</property>
+        </layout>
+        <child>
+          <object class="tk.LabelFrame" id="RecoveryMethodFrame">
+            <property name="font">{Times New Roman} 11 {}</property>
+            <property name="height">200</property>
+            <property name="padx">0</property>
+            <property name="text" translatable="yes">Type A New Recovery Method</property>
+            <layout>
+              <property name="column">0</property>
+              <property name="propagate">True</property>
+              <property name="row">0</property>
+            </layout>
+            <child>
+              <object class="tk.Label" id="Label_6">
+                <property name="text" translatable="yes">Coverage:</property>
+                <layout>
+                  <property name="column">0</property>
+                  <property name="propagate">True</property>
+                  <property name="row">1</property>
+                  <property name="sticky">e</property>
+                </layout>
+              </object>
+            </child>
+            <child>
+              <object class="tk.Entry" id="coverage">
+                <property name="text" translatable="yes">0.5</property>
+                <property name="textvariable">string:coverage</property>
+                <property name="width">16</property>
+                <layout>
+                  <property name="column">1</property>
+                  <property name="propagate">True</property>
+                  <property name="row">1</property>
+                  <property name="sticky">w</property>
+                </layout>
+              </object>
+            </child>
+            <child>
+              <object class="tk.Label" id="Label_7">
+                <property name="text" translatable="yes">Mean Time to Recovery:</property>
+                <layout>
+                  <property name="column">0</property>
+                  <property name="propagate">True</property>
+                  <property name="row">2</property>
+                  <property name="sticky">e</property>
+                </layout>
+              </object>
+            </child>
+            <child>
+              <object class="tk.Entry" id="mttr">
+                <property name="text" translatable="yes">5</property>
+                <property name="textvariable">string:mttr</property>
+                <property name="width">16</property>
+                <layout>
+                  <property name="column">1</property>
+                  <property name="propagate">True</property>
+                  <property name="row">2</property>
+                  <property name="sticky">w</property>
+                </layout>
+              </object>
+            </child>
+            <child>
+              <object class="tk.Label" id="Label_8">
+                <property name="text" translatable="yes">System's MTTF after Recovery:</property>
+                <layout>
+                  <property name="column">0</property>
+                  <property name="propagate">True</property>
+                  <property name="row">3</property>
+                  <property name="sticky">w</property>
+                </layout>
+              </object>
+            </child>
+            <child>
+              <object class="tk.Entry" id="mttf_after">
+                <property name="justify">left</property>
+                <property name="selectborderwidth">0</property>
+                <property name="text" translatable="yes">1440</property>
+                <property name="textvariable">string:mttf_after</property>
+                <property name="width">16</property>
+                <layout>
+                  <property name="column">1</property>
+                  <property name="propagate">True</property>
+                  <property name="row">3</property>
+                  <property name="sticky">w</property>
+                </layout>
+              </object>
+            </child>
+            <child>
+              <object class="tk.Label" id="Label_24">
+                <property name="text" translatable="yes">Index:</property>
+                <layout>
+                  <property name="column">0</property>
+                  <property name="propagate">True</property>
+                  <property name="row">0</property>
+                  <property name="sticky">e</property>
+                </layout>
+              </object>
+            </child>
+            <child>
+              <object class="tk.Entry" id="name_index">
+                <property name="text" translatable="yes">rr1</property>
+                <property name="textvariable">string:name_index</property>
+                <property name="width">16</property>
+                <layout>
+                  <property name="column">1</property>
+                  <property name="propagate">True</property>
+                  <property name="row">0</property>
+                </layout>
+              </object>
+            </child>
+          </object>
+        </child>
+        <child>
+          <object class="tk.Listbox" id="Listbox">
+            <property name="height">6</property>
+            <property name="width">35</property>
+            <layout>
+              <property name="column">2</property>
+              <property name="propagate">True</property>
+              <property name="row">0</property>
+              <property name="sticky">w</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="tk.Scrollbar" id="ScrollBar">
+            <property name="orient">vertical</property>
+            <layout>
+              <property name="column">3</property>
+              <property name="propagate">True</property>
+              <property name="row">0</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="ttk.Frame" id="InOutButtonsFrame">
+            <property name="height">200</property>
+            <property name="width">200</property>
+            <layout>
+              <property name="column">1</property>
+              <property name="propagate">True</property>
+              <property name="row">0</property>
+            </layout>
+            <child>
+              <object class="ttk.Button" id="InputButton">
+                <property name="command">add_new_recovery_method</property>
+                <property name="text" translatable="yes"> &gt;&gt; </property>
+                <property name="width">4</property>
+                <layout>
+                  <property name="column">0</property>
+                  <property name="pady">6</property>
+                  <property name="propagate">True</property>
+                  <property name="row">0</property>
+                </layout>
+              </object>
+            </child>
+            <child>
+              <object class="ttk.Button" id="OutputButton">
+                <property name="command">change_recovery_method</property>
+                <property name="text" translatable="yes"> &lt;&lt; </property>
+                <property name="width">4</property>
+                <layout>
+                  <property name="column">0</property>
+                  <property name="propagate">True</property>
+                  <property name="row">1</property>
+                </layout>
+              </object>
+            </child>
+          </object>
+        </child>
+      </object>
+    </child>
+    <child>
+      <object class="tk.LabelFrame" id="LabelFrame_5">
+        <property name="borderwidth">3</property>
+        <property name="cursor">arrow</property>
+        <property name="font">TkDefaultFont</property>
+        <property name="padx">2</property>
+        <property name="pady">2</property>
+        <layout>
+          <property name="column">0</property>
+          <property name="propagate">True</property>
+          <property name="row">3</property>
+        </layout>
+        <child>
+          <object class="tk.Frame" id="Frame_4">
+            <layout>
+              <property name="column">1</property>
+              <property name="propagate">True</property>
+              <property name="row">0</property>
+            </layout>
+            <child>
+              <object class="tk.Button" id="StartToAnalysis">
+                <property name="command">get_results_display</property>
+                <property name="height">2</property>
+                <property name="text" translatable="yes">Start To Analysis</property>
+                <property name="width">40</property>
+                <layout>
+                  <property name="column">0</property>
+                  <property name="propagate">True</property>
+                  <property name="row">0</property>
+                </layout>
+              </object>
+            </child>
+          </object>
+        </child>
+      </object>
+    </child>
+    <child>
+      <object class="tk.LabelFrame" id="LabelFrame_6">
+        <property name="font">{Times New Roman} 14 {}</property>
+        <property name="padx">5</property>
+        <property name="text" translatable="yes">Results Report</property>
+        <property name="width">600</property>
+        <layout>
+          <property name="column">0</property>
+          <property name="propagate">True</property>
+          <property name="row">4</property>
+          <property name="sticky">w</property>
+        </layout>
+        <child>
+          <object class="tk.Label" id="Label_10">
+            <property name="text" translatable="yes">Steady-State Availability (SSA):</property>
+            <layout>
+              <property name="column">0</property>
+              <property name="propagate">True</property>
+              <property name="row">0</property>
+              <property name="sticky">w</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="tk.Label" id="Label_11">
+            <property name="text" translatable="yes">The Optimal Sequence:</property>
+            <layout>
+              <property name="column">0</property>
+              <property name="propagate">True</property>
+              <property name="row">1</property>
+              <property name="sticky">w</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="tk.Label" id="Label_13">
+            <property name="text" translatable="yes">System's Overall MTTF:</property>
+            <layout>
+              <property name="column">0</property>
+              <property name="propagate">True</property>
+              <property name="row">3</property>
+              <property name="sticky">w</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="tk.Label" id="Label_14">
+            <property name="text" translatable="yes">System' Overall MTTR:</property>
+            <layout>
+              <property name="column">0</property>
+              <property name="propagate">True</property>
+              <property name="row">4</property>
+              <property name="sticky">w</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="tk.Entry" id="Entry_13">
+            <property name="state">readonly</property>
+            <property name="text" translatable="yes">Entry_13</property>
+            <property name="textvariable">string:availability</property>
+            <property name="width">55</property>
+            <layout>
+              <property name="column">1</property>
+              <property name="propagate">True</property>
+              <property name="row">0</property>
+              <property name="sticky">w</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="tk.Entry" id="Entry_14">
+            <property name="state">readonly</property>
+            <property name="text" translatable="yes">Entry_14</property>
+            <property name="textvariable">string:op_sequence</property>
+            <property name="width">55</property>
+            <layout>
+              <property name="column">1</property>
+              <property name="propagate">True</property>
+              <property name="row">1</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="tk.Entry" id="Entry_16">
+            <property name="state">readonly</property>
+            <property name="text" translatable="yes">Entry_16</property>
+            <property name="textvariable">string:sys_mttf</property>
+            <property name="width">55</property>
+            <layout>
+              <property name="column">1</property>
+              <property name="propagate">True</property>
+              <property name="row">3</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="tk.Entry" id="Entry_17">
+            <property name="state">readonly</property>
+            <property name="text" translatable="yes">Entry_17</property>
+            <property name="textvariable">string:sys_mttr</property>
+            <property name="width">55</property>
+            <layout>
+              <property name="column">1</property>
+              <property name="propagate">True</property>
+              <property name="row">4</property>
+            </layout>
+          </object>
+        </child>
+      </object>
+    </child>
+    <child>
+      <object class="tk.Label" id="Label_22">
+        <property name="font">{Arial} 12 {bold}</property>
+        <property name="pady">5</property>
+        <property name="text" translatable="yes">OPtimal ENvironmental-diversity-fault-tolearnce-analysis Software (OPENS)</property>
+        <layout>
+          <property name="column">0</property>
+          <property name="propagate">True</property>
+          <property name="row">0</property>
+        </layout>
+      </object>
+    </child>
+  </object>
+</interface>

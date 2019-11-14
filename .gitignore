@@ -1,0 +1,5 @@
+#ignore all files for pycharm.
+.idea/
+_pycache_
+venv
+**/*.pyc
